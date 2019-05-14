@@ -6,10 +6,10 @@
 
         <title>Sayit</title>
 
-        <!-- Fonts -->
+        <!-- Fuentes -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
+        <!-- Estilos -->
         <style>
             html, body {
                 background-color: #fff;
@@ -18,6 +18,10 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+
+            .container{
+                max-width: 1270px;
             }
 
             .full-height {
@@ -70,10 +74,10 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Iniciar Sesión</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Registrarse</a>
                         @endif
                     @endauth
                 </div>
