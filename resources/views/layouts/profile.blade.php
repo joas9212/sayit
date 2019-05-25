@@ -34,7 +34,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        @guest
+                        @else
+                        <li class="contMenuNavBar" onclick="location.href = '{{route('home')}}';">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
+                            width="25px" height="25px"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            fill="#dfdfdf" stroke='red'
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g><g><path d="M256,11.96L0,234.276l26.206,30.176l23.967-20.814V440.09c0,33.056,26.893,59.95,59.95,59.95h111.906V304.204h69.941
+                            V500.04h109.908c33.056,0,59.95-26.893,59.95-59.95V243.639l23.967,20.814L512,234.277L256,11.96z M421.861,440.09
+                            c0,11.019-8.964,19.983-19.983,19.983h-69.941V264.238H182.062v195.836h-71.94c-11.019,0-19.983-8.964-19.983-19.983V208.931
+                            L256,64.894l165.861,144.037V440.09z"/></g></g></svg>
+                        </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->

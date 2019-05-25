@@ -11,8 +11,16 @@
 	background-color: white;
 }
 
-.aside-left #detailProfile strong{
+.aside-left #detailProfile strong{}
 
+.contMenuNavBar > svg{
+	opacity: .5;
+	cursor: pointer;
+	transition: .5s all;
+}
+
+.contMenuNavBar:hover > svg{
+	opacity: 1;
 }
 
 .aside-left #detailProfile em{
@@ -27,6 +35,8 @@
 	height: 100px;
 	width: 100%;
 	cursor: pointer;	
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .aside-left #detailProfile #imgProf{
@@ -36,6 +46,9 @@
 	top: -35px;
 	position: absolute;
 	cursor: pointer;	
+	background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .aside-left #detailProfile .colDetailTitle{

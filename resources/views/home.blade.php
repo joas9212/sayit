@@ -25,11 +25,17 @@
     <div class="row justify-content-center">
         <div class="col-12 aside-left">
             <div id="detailProfile" class="withBorder">
-                <img src="" id="imgPort">
+                <div id="imgPort" 
+                    onclick="location.href = '{{route('profile')}}';"
+                    style="background-image: url({{asset('img/zapatos.jpg')}});">
+                </div>
                 <div class="container">
                     <div class="row mb-2">
                         <div class="col-4">
-                            <img src="" id="imgProf">
+                            <div id="imgProf" 
+                                    onclick="location.href = '{{route('profile')}}';"
+                                    style="background-image: url({{asset('img/im.png')}});">
+                            </div>
                         </div>
                         <div class="col-8">
                             <div>

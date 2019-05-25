@@ -13,6 +13,16 @@
     background-size: cover;
 }
 
+.contMenuNavBar > svg{
+	opacity: .5;
+	cursor: pointer;
+	transition: .5s all;
+}
+
+.contMenuNavBar:hover > svg{
+	opacity: 1;
+}
+
 .contentHeader #imgProf{
 	z-index: 2;
 	width: 200px;
