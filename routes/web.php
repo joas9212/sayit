@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::group( ['prefix' => 'user' , 'middleware' => ['auth']] , function(){
+	Route::get('/profile', ['as' => 'profile',function(){
+		return view('profiles.profile');
+	}]);
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

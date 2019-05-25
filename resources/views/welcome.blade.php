@@ -87,8 +87,6 @@
                 <div class="title m-b-md">
                     Sayit
                 </div>
-
-                
             </div>
         </div>
     </body>

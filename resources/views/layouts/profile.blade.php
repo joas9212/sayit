@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styleProfiles.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -79,18 +79,16 @@
         </nav>
 
         <div class="container">
-            @guest
                 <div class="row">
                     <div class="col">
-                        <main class="py-4">
-                            @yield('content')
+                        <main class="py-2">
+                            @yield('contentHeader')
                         </main>    
                     </div>
                 </div>
-            @else
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 p-0">
-                       <aside class="py-4">
+                       <aside class="py-2">
                             @yield('aside-left')
                         </aside>                    
                     </div>
@@ -105,9 +103,7 @@
                         </aside>        
                     </div>
                 </div>
-            @endguest
         </div>
-
     </div>
 </body>
 </html>

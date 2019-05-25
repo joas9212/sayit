@@ -1,0 +1,51 @@
+.aside-left .withBorder{
+	border: solid #dfdfdf 1px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.aside-left #detailProfile{
+	height: auto;
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+}
+
+.aside-left #detailProfile strong{
+
+}
+
+.aside-left #detailProfile em{
+	color: #657786;
+	font-size: 13px;
+	font-style: normal;
+}
+
+
+
+.aside-left #detailProfile #imgPort{
+	height: 100px;
+	width: 100%;
+	cursor: pointer;	
+}
+
+.aside-left #detailProfile #imgProf{
+	border-radius: 50%;
+	height: 70px;
+	width:  70px;
+	top: -35px;
+	position: absolute;
+	cursor: pointer;	
+}
+
+.aside-left #detailProfile .colDetailTitle{
+	font-size: 14px;
+	color: #657786;
+	font-weight: 600;
+}
+
+.aside-left #detailProfile .colDetailText{
+	font-size: 18px;
+	color: #4ab3f4;
+	font-weight: 900;
+}
