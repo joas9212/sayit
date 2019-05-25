@@ -1,4 +1,4 @@
-@extends('layouts.Profile')
+@extends('layouts.profile')
 
 @section('contentHeader')
 <div class="container contentHeader">
