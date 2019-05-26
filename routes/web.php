@@ -10,11 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 Route::group( ['prefix' => 'user' , 'middleware' => ['auth']] , function(){
 	Route::get('/profile', ['as' => 'profile',function(){
@@ -22,7 +22,8 @@ Route::group( ['prefix' => 'user' , 'middleware' => ['auth']] , function(){
 	}]);
 });
 
+Route::post('port','ImagesController@storeImgPort')->name('storeImgPort');
 
-Auth::routes();
+Route::post('prof','ImagesController@storeImgProf')->name('storeImgProf');
 
 Route::get('/home', 'HomeController@index')->name('home');

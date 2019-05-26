@@ -11,6 +11,7 @@
 	height: 350px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center bottom;
 }
 
 .contMenuNavBar > svg{
@@ -31,7 +32,7 @@
 	position: absolute;
 	left: 80px;
 	bottom: -90px;
-	background-position: center; 
+	background-position: center center; 
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -62,4 +63,35 @@
 
 .contentHeader #imgProf:hover  #changeImgProf{
 	opacity: .9;
+}
+
+.showPreviewImg {
+	transition: .7s all;
+}
+
+.showPreviewImg ul{
+	list-style: none;
+	padding: 0px;
+}
+
+.showPreviewImg ul li img{
+	width: 100%;
+}
+
+.card-footer{
+	background-color: white; 
+}
+
+@media only screen and (max-width: 600px) {
+
+	.contentHeader #imgProf{
+		text-align: center;	
+	}
+	.contentHeader #imgProf{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: auto;
+		bottom: auto;
+	}
 }

@@ -25,7 +25,7 @@
 
 .aside-left #detailProfile em{
 	color: #657786;
-	font-size: 13px;
+	font-size: 11px;
 	font-style: normal;
 }
 
@@ -37,6 +37,7 @@
 	cursor: pointer;	
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center bottom;
 }
 
 .aside-left #detailProfile #imgProf{
@@ -46,7 +47,7 @@
 	top: -35px;
 	position: absolute;
 	cursor: pointer;	
-	background-position: center; 
+	background-position: center center; 
     background-repeat: no-repeat;
     background-size: cover;
 }

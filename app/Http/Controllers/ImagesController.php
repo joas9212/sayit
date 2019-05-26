@@ -7,17 +7,29 @@ use Illuminate\Support\Facades\Auth;
 
 class ImagesController extends Controller
 {
-    public function store(Request $request){
-        //        
-        $images = ImagesRoutes::find(Auth::User()->acount->business->images->id);
-        $request->validate(['inputPersonalImage' => 'image']);
-        if($request->validate(['inputPersonalImage' => 'image'])){
-            $fileName = 'U'.Auth::User()->id.'_B'.Auth::User()->acount->business->id.'.jpg';
-            $path = $request->inputPersonalImage->storeAs('users', $fileName, 'publicUsers');
-            $images->personal_image = asset('/storage/'). '/' .$path;
+    public function storeImgPort(Request $request){
+        //
+        $user = Auth::User();
+        $request->validate(['inputPort' => 'image']);
+        if($request->validate(['inputPort' => 'image'])){
+            $fileName = 'CoverU'.Auth::User()->id.'.jpg';
+            $path = $request->inputPort->storeAs('usersCovers', $fileName, 'publicUsers');
+            $user->imgPort = asset('/storage/'). '/' .$path;
         }
-        $images->cover_image = $request->inputCoverImage;
-        $images->save();
-        return redirect('home')->with('success',' Update Info Message');
+        $user->save();
+        return redirect('user/profile')->with('success',' Update Info Message');
+    }
+
+    public function storeImgProf(Request $request){
+        //      
+        $user = Auth::User();
+        $request->validate(['inputProf' => 'image']);
+        if($request->validate(['inputProf' => 'image'])){
+            $fileName = 'ProfiU'.Auth::User()->id.'.jpg';
+            $path = $request->inputProf->storeAs('usersProfiles', $fileName, 'publicUsers');
+            $user->imgProf = asset('/storage/'). '/' .$path;
+        }
+        $user->save();
+        return redirect('user/profile')->with('success',' Update Info Message');
     }
 }

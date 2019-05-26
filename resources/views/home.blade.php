@@ -27,14 +27,14 @@
             <div id="detailProfile" class="withBorder">
                 <div id="imgPort" 
                     onclick="location.href = '{{route('profile')}}';"
-                    style="background-image: url({{asset('img/zapatos.jpg')}});">
+                    style="background-image: url({{ Auth::User()->imgPort}});">
                 </div>
                 <div class="container">
                     <div class="row mb-2">
                         <div class="col-4">
                             <div id="imgProf" 
                                     onclick="location.href = '{{route('profile')}}';"
-                                    style="background-image: url({{asset('img/im.png')}});">
+                                    style="background-image: url({{ Auth::User()->imgProf}});">
                             </div>
                         </div>
                         <div class="col-8">
