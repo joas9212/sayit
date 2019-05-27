@@ -21,9 +21,45 @@
                 	</div>
                 </div>
             </div>
-                <div class="card-footer">
-                  hola
+            <div class="card-footer py-0">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 p-0">                
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-0">
+                        <main class="py-0">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                      <div class="row">
+                                        <ul class="nav nav-pills listMenu" id="pills-tab" role="tablist">
+                                          <li class="col nav-item menuProfile p-0">
+                                            <a class="nav-link" id="pills-coments-tab" data-toggle="pill" href="#pills-coments" role="tab" aria-controls="pills-coments" aria-selected="true">
+                                            Comentarios</a>
+                                          </li>
+                                          <li class="col nav-item menuProfile p-0">
+                                            <a class="nav-link" id="pills-likes-tab" data-toggle="pill" href="#pills-likes" role="tab" aria-controls="pills-likes" aria-selected="true">Me gusta</a>
+                                          </li>
+                                          @if(Auth::User()->role==2)
+                                            <li class=" col nav-item menuProfile p-0">
+                                              <a class="nav-link" id="pills-topics-tab" data-toggle="pill" href="#pills-topics" role="tab" aria-controls="pills-topics" aria-selected="false">Mis temas</a>
+                                            </li>
+                                          @endif
+                                          <li class=" col nav-item menuProfile p-0">
+                                            <a class="nav-link" id="pills-sigo-tab" data-toggle="pill" href="#pills-sigo" role="tab" aria-controls="pills-sigo" aria-selected="false">Siguiendo</a>
+                                          </li>
+                                          <li class=" col nav-item menuProfile p-0">
+                                            <a class="nav-link" id="pills-mesiguen-tab" data-toggle="pill" href="#pills-mesiguen" role="tab" aria-controls="pills-mesiguen" aria-selected="false">Seguidores</a>
+                                          </li>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>    
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 p-0">   
+                    </div>
                 </div>
+            </div>
         </div>
     </div>
 </div>
@@ -111,8 +147,56 @@
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="card">
-                <div class="card-body">
-                	hola
+                <div class="card-body p-0">
+                	<div class="tab-content" id="pills-tabContent">
+                    @if(session('tabMenu')=='1' or session('tabMenu')==null)
+                      <div class="tab-pane fade show active" id="pills-coments" role="tabpanel" aria-labelledby="pills-coments-tab">
+                    @else
+                      <div class="tab-pane fade" id="pills-coments" role="tabpanel" aria-labelledby="pills-coments-tab">
+                    @endif
+                      <div class="container px-0">
+                        @include('layouts.contentMenus.coments')
+                      </div>
+                    </div>
+                    @if(session('tabMenu')=='2')
+                      <div class="tab-pane fade show active" id="pills-likes" role="tabpanel" aria-labelledby="pills-likes-tab">
+                    @else
+                      <div class="tab-pane fade" id="pills-likes" role="tabpanel" aria-labelledby="pills-likes-tab">
+                    @endif
+                      <div class="container px-0">
+                        @include('layouts.contentMenus.likes')
+                      </div>
+                    </div>
+                    @if(Auth::User()->role==2)
+                      @if(session('tabMenu')=='3')
+                        <div class="tab-pane fade show active" id="pills-topics" role="tabpanel" aria-labelledby="pills-topics-tab">
+                      @else
+                        <div class="tab-pane fade" id="pills-topics" role="tabpanel" aria-labelledby="pills-topics-tab">
+                      @endif
+                        <div class="container px-0">
+                          @include('layouts.contentMenus.topics')
+                        </div>
+                      </div>
+                    @endif
+                    @if(session('tabMenu')=='4')
+                      <div class="tab-pane fade show active" id="pills-sigo" role="tabpanel" aria-labelledby="pills-sigo-tab">
+                    @else
+                      <div class="tab-pane fade" id="pills-sigo" role="tabpanel" aria-labelledby="pills-sigo-tab">
+                    @endif
+                      <div class="container px-0">
+                        @include('layouts.contentMenus.sigo')
+                      </div>
+                    </div>
+                    @if(session('tabMenu')=='5')
+                      <div class="tab-pane fade show active" id="pills-mesiguen" role="tabpanel" aria-labelledby="pills-mesiguen-tab">
+                    @else
+                      <div class="tab-pane fade" id="pills-mesiguen" role="tabpanel" aria-labelledby="pills-mesiguen-tab">
+                    @endif
+                      <div class="container px-0">
+                        @include('layouts.contentMenus.mesiguen')
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -126,4 +210,8 @@
 
 @section('aside-rigth')
 
+@endsection
+
+@section('extras_section')
+    <!-- include('user.modals.modalParamControls') -->
 @endsection

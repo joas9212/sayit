@@ -1,0 +1,87 @@
+.addComent{
+	background-color: #E8F5FD;
+}
+
+.addComent textarea{
+	width: 100%;
+	height: auto;
+}
+
+.addComent #divImgComent{
+	width: 100%;
+	height: 35px;
+}
+
+.addComent #divImgComent #imgComent{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#svgAddImg > svg{
+	opacity: .5;
+	fill:#46b2f4;
+	stroke: #46b2f4;
+	stroke-width: 3;
+	cursor: pointer;
+	font-weight: bold;
+	transition: .5s all;
+}
+
+#svgAddImg > svg:hover{
+	opacity: 1;
+	fill:"#46b2f4";
+	stroke: "#46b2f4";
+}
+
+.addComent button{
+	border-radius: 5px;
+	color: white !important;
+}
+
+.addComent #inputImgNewTopic{
+	visibility: hidden;
+	height: 0px;
+}
+
+.addComent #previewImgNewTopic {
+
+}
+.addComent #previewImgNewTopic > ul{
+	height: auto;
+	max-height: 100px;
+	overflow-y: auto;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.addComent #previewImgNewTopic > ul > li{
+	width: 100px;
+	/*margin-left: 5px;*/
+	/*margin-right: 5px;*/
+	margin: 0px 5px 10px 5px;
+	height: 100px;
+	max-height: 100px;
+}
+.addComent #previewImgNewTopic > ul > li > img{
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	max-height: 100px;
+}
+.addComent textarea:focus{
+}
+
+
+@media only screen and (max-width: 767px) {
+
+	.addComent #divImgComent{
+		width: 100%;
+		height: 27px;
+	}
+
+
+}

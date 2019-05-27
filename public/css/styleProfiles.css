@@ -1,3 +1,19 @@
+/*-------------------------------System-------------------------------------*/
+
+*::-webkit-scrollbar{
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(134,142,150,0.3);
+    border-radius: 5px;
+    transition: .5s all;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(134,142,150,1);
+    border-radius: 5px;
+}
+
 .contentHeader{
 	position: relative;
 }
@@ -82,7 +98,36 @@
 	background-color: white; 
 }
 
-@media only screen and (max-width: 600px) {
+.menuProfile {
+	position: relative;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select:none;
+	transition: all .15s ease-in-out !important;
+}
+.menuProfile:hover{
+	border-bottom: #1da1f2 solid 2px;
+}
+.menuProfile>a{
+	color: #657786 !important;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+	height: 90%;
+	background-color: transparent !important;
+}
+
+.listMenu{
+	padding: 0px;
+	width: 100%;
+}
+
+
+@media only screen and (max-width: 1200px) {
 
 	.contentHeader #imgProf{
 		text-align: center;	
@@ -93,5 +138,9 @@
 		left: 0px;
 		right: auto;
 		bottom: auto;
+	}
+
+	.menuProfile {
+		height: auto;
 	}
 }

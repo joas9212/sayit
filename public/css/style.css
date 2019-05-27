@@ -1,3 +1,19 @@
+/*-------------------------------System-------------------------------------*/
+
+*::-webkit-scrollbar{
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(134,142,150,0.3);
+    border-radius: 5px;
+    transition: .5s all;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(134,142,150,1);
+    border-radius: 5px;
+}
+
 .aside-left .withBorder{
 	border: solid #dfdfdf 1px;
 	width: 100%;

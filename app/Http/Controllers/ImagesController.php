@@ -32,4 +32,5 @@ class ImagesController extends Controller
         $user->save();
         return redirect('user/profile')->with('success',' Update Info Message');
     }
+
 }

@@ -106,3 +106,52 @@ function returnFileSize(number) {
   }
 }
 
+
+var inputImgNewTopic =    document.getElementById('inputImgNewTopic');
+var previewImgNewTopic =  document.getElementById('previewImgNewTopic');
+var svgAddImg =  document.getElementById('svgAddImg');
+if(previewImgNewTopic != null){
+  previewImgNewTopic.style.opacity = 0;
+}
+if(inputImgNewTopic != null){
+  if(svgAddImg != null){
+    svgAddImg.addEventListener('click', function(){
+      inputImgNewTopic.click();
+    });
+  }
+  inputImgNewTopic.addEventListener('change', updateImageDisplayThree);
+}
+function updateImageDisplayThree() {
+  while(previewImgNewTopic.firstChild) {
+    previewImgNewTopic.removeChild(previewImgNewTopic.firstChild);
+  }
+
+  var curFiles = inputImgNewTopic.files;
+  if(curFiles.length === 0) {
+    var para = document.createElement('p');
+    para.textContent = 'No hay archivos seleccionados';
+    previewImgNewTopic.appendChild(para);
+  } else {
+    var list = document.createElement('ul');
+    previewImgNewTopic.appendChild(list);
+    for(var i = 0; i < curFiles.length; i++) {
+      var listItem = document.createElement('li');
+      var para = document.createElement('p');
+      if(validFileType(curFiles[i])) {
+        para.textContent = 'Nombre del archivo ' + curFiles[i].name + ', Tamaño ' + returnFileSize(curFiles[i].size) + '.';
+        var image = document.createElement('img');
+        image.src = window.URL.createObjectURL(curFiles[i]);
+
+        listItem.appendChild(image);
+        // listItem.appendChild(para);
+
+      } else {
+        para.textContent = 'Nombre del archivo ' + curFiles[i].name + ': No es de un tipo valido. Cambia tu selección.';
+        listItem.appendChild(para);
+      }
+
+      list.appendChild(listItem);
+    }
+    previewImgNewTopic.style.opacity = 1;
+  }
+}

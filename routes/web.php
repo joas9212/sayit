@@ -26,4 +26,6 @@ Route::post('port','ImagesController@storeImgPort')->name('storeImgPort');
 
 Route::post('prof','ImagesController@storeImgProf')->name('storeImgProf');
 
+Route::resource('topics','TopicsController');
+
 Route::get('/home', 'HomeController@index')->name('home');

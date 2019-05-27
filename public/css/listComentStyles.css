@@ -1,0 +1,85 @@
+.listComent{
+	background-color: white;
+	border-bottom: 1px #dfdfdf solid;
+}
+
+.listComent #textarea{
+	width: 100%;
+	height: auto;
+}
+
+.listComent #textarea strong{
+	font-size: 14px;
+}
+.listComent #textarea em{
+	font-size: 12px;
+	color: #657786;
+	font-style: normal;
+}
+
+.listComent #divImgListComent{
+	width: 100%;
+    height: 35px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+}
+
+.listComent #divImgListComent img{    
+	height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.listComent #options > svg{
+	opacity: .5;
+	fill:#46b2f4;
+	stroke: #46b2f4;
+	stroke-width: 3;
+	cursor: pointer;
+	font-weight: bold;
+	transition: .5s all;
+}
+
+.listComent #options > svg:hover{
+	opacity: 1;
+	fill:"#46b2f4";
+	stroke: "#46b2f4";
+}
+
+.listComent #showListImgComent{
+	height: 280px;
+	max-height: 280px;
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+.listComent #showListImgComent #contenImgs{
+	height: 260px;
+	max-height: 260px;
+	width: auto;
+	display: flex;
+}
+
+.listComent #showListImgComent #contenImgs #contentOnlyOneImg{
+	width: 450px;
+	height: 260px;
+	max-height: 260px;
+	text-align: center;
+}
+
+.listComent #showListImgComent #contenImgs #contentOnlyOneImg img{
+	height: 100%;
+}
