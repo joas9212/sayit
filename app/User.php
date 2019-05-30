@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','role'
+        'name', 'email','role','imgPort','imgProf'
     ];
 
     /**
@@ -39,6 +39,14 @@ class User extends Authenticatable
 
     public function topics(){
         return $this->hasMany('App\Topics');
+    }
+
+    public function likesTopics(){
+        return $this->hasMany('App\LikesTopics');
+    }
+
+    public function likesComents(){
+        return $this->hasMany('App\LikesComents');
     }
 
     public function coments(){

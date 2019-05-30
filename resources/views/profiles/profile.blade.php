@@ -47,9 +47,6 @@
                                           <li class=" col nav-item menuProfile p-0">
                                             <a class="nav-link" id="pills-sigo-tab" data-toggle="pill" href="#pills-sigo" role="tab" aria-controls="pills-sigo" aria-selected="false">Siguiendo</a>
                                           </li>
-                                          <li class=" col nav-item menuProfile p-0">
-                                            <a class="nav-link" id="pills-mesiguen-tab" data-toggle="pill" href="#pills-mesiguen" role="tab" aria-controls="pills-mesiguen" aria-selected="false">Seguidores</a>
-                                          </li>
                                       </div>
                                     </div>
                                 </div>
@@ -205,11 +202,11 @@
 @endsection
 
 @section('aside-left')
-
+  
 @endsection
 
 @section('aside-rigth')
-
+            @include('layouts.common.right')
 @endsection
 
 @section('extras_section')

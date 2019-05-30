@@ -16,4 +16,12 @@ class LikesComents extends Model
         return $this->belongsTo('App\Coments');
     }
 
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
+    public function scopeComentsOfUser($query, $coments_id, $user_id)
+    {
+        return $query->where('coments_id', $coments_id)->where('user_id', $user_id);
+    }
 }

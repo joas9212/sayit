@@ -9,7 +9,7 @@ class Coments extends Model
 	protected $table = 'coments';
     //
     protected $fillable = [
-        'id', 'coment', 'user_id'
+        'id', 'coment', 'user_id', 'topics_id'
     ];
 
     public function user(){
@@ -22,5 +22,9 @@ class Coments extends Model
 
     public function likes(){
         return $this->hasMany('App\LikesComents');
+    }
+    
+    public function topic(){
+        return $this->belongsTo('App\Topics');
     }
 }

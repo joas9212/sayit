@@ -15,4 +15,13 @@ class LikesTopics extends Model
     public function topic(){
         return $this->belongsTo('App\Topics');
     }
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
+    public function scopeTopicsOfUser($query, $topics_id, $user_id)
+    {
+        return $query->where('topics_id', $topics_id)->where('user_id', $user_id);
+    }
 }

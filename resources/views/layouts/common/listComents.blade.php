@@ -1,4 +1,4 @@
-@foreach (Auth::User()->coments->reverse() as $coment)
+@foreach ($topic->coments->reverse() as $coment)
 	<div class="container listComent">
 		<div class="container py-2 px-0">
 			<div class="row mt-2 mb-0">
@@ -60,9 +60,6 @@
 									<strong>{{Auth::User()->name}}</strong>  
 									<em>{{Auth::User()->email}} - {{$r}}</em> 
 								</p>
-								<p id="textarea">
-									<strong>{{$coment->titleTopic}}</strong>  
-								</p>
 							</div> 
 						</div>
 						<div class="row p-0">
@@ -77,7 +74,7 @@
 				<div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 pl-3 pr-0"></div>
 				<div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
 					@if($coment->images->count() > 0)
-						<div class="mt-0 showListImg" id="showListImgComent">
+						<div class="mt-0 showListImg" id="showListImgComent" onclick="clickTopic()">
 							<div id="contenImgs">
 								@foreach($coment->images as $image)
 									<div id="contentOnlyOneImg">

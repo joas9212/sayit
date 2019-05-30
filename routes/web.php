@@ -1,5 +1,9 @@
 <?php
 
+
+
+use App\Topics;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,4 +32,19 @@ Route::post('prof','ImagesController@storeImgProf')->name('storeImgProf');
 
 Route::resource('topics','TopicsController');
 
+Route::resource('coments','ComentsController');
+
+
+Route::resource('likesTopics','LikesTopicsController');
+Route::post('likesTopicsErase','LikesTopicsController@unlike')->name('unlike');
+
+Route::resource('likesComents','LikesComentsController');
+Route::post('likesComentsErase','LikesComentsController@unlike')->name('unlike');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('topic/{name}', function ($name) {
+	$topics = Topics::name($name)->get();
+	$return = $topics;
+    return view('home', compact('return', $return));
+});

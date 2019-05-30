@@ -79,3 +79,31 @@
 	color: #4ab3f4;
 	font-weight: 900;
 }
+
+
+.imgRedonda {
+                width:20px;
+                height:20px;
+                border-radius:150px;
+            }
+            .border{
+                color:#0013ff;
+                background-color: white;
+                border-radius: 20px;
+                border-style: solid;
+                border-width: 1px;
+                border-color: #0013ff;
+                font-size: 10px;
+                transition: .5s all;
+                cursor: pointer;
+            }
+            .border:hover{
+            	background-color: #4ab3f4;
+            	color: white;
+
+            }
+            .grosor{
+                color:black;
+                 font-weight: 1000;
+                 font-size: 11px;
+            }

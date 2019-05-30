@@ -155,3 +155,62 @@ function updateImageDisplayThree() {
     previewImgNewTopic.style.opacity = 1;
   }
 }
+
+
+
+var inputImgNewCG =    document.getElementById('inputImgNewCG');
+var previewImgNewCG =  document.getElementById('previewImgNewCG');
+var svgAddComentImg =  document.getElementById('svgAddComentImg');
+if(previewImgNewCG != null){
+  previewImgNewCG.style.opacity = 0;
+}
+if(inputImgNewCG != null){
+  if(svgAddComentImg != null){
+    svgAddComentImg.addEventListener('click', function(){
+      inputImgNewCG.click();
+    });
+  }
+  inputImgNewCG.addEventListener('change', updateImageDisplayFour);
+}
+function updateImageDisplayFour() {
+  while(previewImgNewCG.firstChild) {
+    previewImgNewCG.removeChild(previewImgNewCG.firstChild);
+  }
+
+  var curFiles = inputImgNewCG.files;
+  if(curFiles.length === 0) {
+    var para = document.createElement('p');
+    para.textContent = 'No hay archivos seleccionados';
+    previewImgNewCG.appendChild(para);
+  } else {
+    var list = document.createElement('ul');
+    previewImgNewCG.appendChild(list);
+    for(var i = 0; i < curFiles.length; i++) {
+      var listItem = document.createElement('li');
+      var para = document.createElement('p');
+      if(validFileType(curFiles[i])) {
+        para.textContent = 'Nombre del archivo ' + curFiles[i].name + ', Tamaño ' + returnFileSize(curFiles[i].size) + '.';
+        var image = document.createElement('img');
+        image.src = window.URL.createObjectURL(curFiles[i]);
+
+        listItem.appendChild(image);
+        // listItem.appendChild(para);
+
+      } else {
+        para.textContent = 'Nombre del archivo ' + curFiles[i].name + ': No es de un tipo valido. Cambia tu selección.';
+        listItem.appendChild(para);
+      }
+
+      list.appendChild(listItem);
+    }
+    previewImgNewCG.style.opacity = 1;
+  }
+}
+
+function changeModalAddComent(tema, topic_id) {
+
+  document.getElementById('tituloAddComentsG').textContent = "Comentar Tema: "+tema;
+  document.getElementById('input_topics_id').value = topic_id;
+
+
+}

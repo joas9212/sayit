@@ -11,6 +11,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/profile.js') }}" defer></script>
+    <script src="{{ asset('js/common.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,6 +21,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styleProfiles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/addComentStyles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/addTopicStyles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/listComentStyles.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -64,9 +70,11 @@
                             @endif
                         @else
                             <form class="form-inline my-2 my-lg-0">
-                              <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-                              <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+                              <input class="form-control mr-sm-2" id="input1" type="search" placeholder="Buscar" aria-label="Search">
                             </form>
+                              <button class="btn btn-outline-info my-2 my-sm-0" 
+                              onclick="location.href = '/topic/' + document.getElementById('input1').value;" 
+                              >Buscar</button>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

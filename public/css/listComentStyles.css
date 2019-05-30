@@ -54,6 +54,61 @@
 	stroke: "#46b2f4";
 }
 
+.listComent #options div > svg#like{
+	opacity: 1;
+	fill:transparent;
+	stroke: #D75A4A;
+	stroke-width: 20;
+	cursor: pointer;
+	transition: .5s all;
+	width: 20px;
+	height: 20px;
+}
+.listComent #options div > svg#like:hover{
+	opacity: 1;
+	fill:#D75A4A;
+}
+
+.listComent #options div.contLike{
+	width: 20px;
+	height: 20px;
+}
+
+.listComent #options div > svg#withlike{
+	opacity: 1;
+	fill:#D75A4A;
+	stroke: #D75A4A;
+	stroke-width: 20;
+	cursor: pointer;
+	transition: .5s all;
+	width: 20px;
+	height: 20px;
+}
+.listComent #options div > svg#withlike:hover{
+	opacity: 1;
+	fill:#D75A4A;
+}
+
+.svgAddComent{
+	opacity: .5;
+	fill:#46b2f4;
+	stroke: #46b2f4;
+	stroke-width: 3;
+	cursor: pointer;
+	font-weight: bold;
+	transition: .5s all;
+}
+
+.svgAddComenth:over{
+	opacity: 1;
+	fill:#46b2f4;
+	stroke: #46b2f4;
+	stroke-width: 3;
+	cursor: pointer;
+	font-weight: bold;
+	transition: .5s all;
+}
+
 .listComent #showListImgComent{
 	height: 280px;
 	max-height: 280px;

@@ -9,7 +9,7 @@ class ImagesComents extends Model
 	protected $table = 'images_coments';
     //
     protected $fillable = [
-        'id', 'path', 'topics_id'
+        'id', 'path', 'coments_id'
     ];
 
     public function coment(){

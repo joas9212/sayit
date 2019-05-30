@@ -23,4 +23,13 @@ class Topics extends Model
     public function likes(){
         return $this->hasMany('App\LikesTopics');
     }
+
+    public function coments(){
+        return $this->hasMany('App\Coments');
+    }
+
+    public function scopeName($query, $name)
+    {
+        return $query->where('topic', 'like' , '%'.$name.'%');
+    }
 }

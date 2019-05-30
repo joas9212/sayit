@@ -17,6 +17,7 @@ class CreateComents extends Migration
             $table->bigIncrements('id');
             $table->string('coment',300);
             $table->integer('user_id');
+            $table->integer('topics_id');
             $table->timestamps();
         });
     }
